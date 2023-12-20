@@ -1,0 +1,355 @@
+.edgeHeader {
+    position: relative;
+    height: 700px;
+
+    &::after {
+
+        content: '';
+        position: absolute;
+        border: 1px solid #ddd;
+        width: 100%;
+        top: 80px;
+
+        @include tablet690 {
+            top: 44px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        border: 1px solid #ddd;
+        width: 100%;
+        top: 80px;
+
+        @include tablet690 {
+            top: 106px;
+        }
+
+        @include tablet510 {
+            top: 104px;
+        }
+    }
+
+    @include tablet690 {
+        height: 576px;
+    }
+
+    @include tablet510 {
+        height: 520px;
+    }
+
+    @include phones {
+        height: 433px;
+    }
+
+    .mainHeader {
+        height: 100%;
+
+        header {
+            display: flex;
+            height: 80px;
+
+            @include tablet690 {
+                height: 106px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .headerNavOrder:nth-child(2) {
+                    order: 1;
+                }
+            }
+
+            @include tablet510 {
+                height: 104px;
+            }
+
+            @include phones {
+                display: flex;
+                flex-direction: column;
+                height: 105px;
+                flex-wrap: nowrap;
+            }
+
+            .headerLogo {
+                display: flex;
+                align-items: center;
+                flex-basis: 140px;
+
+                @include tablet690 {
+                    flex-basis: 347px;
+                }
+
+                @include tablet510 {
+                    flex-basis: 140px;
+                }
+
+                @include phones {
+                    justify-content: center;
+                    flex-basis: auto;
+                    width: 100%;
+                    height: 45px;
+                }
+
+                .headerLogoLink {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .headerNavigation {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                flex: 1;
+
+                @include phones {
+                    display: none;
+                }
+
+                .headerLinksList {
+
+                    display: flex;
+
+                    @include tablet690 {
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                    
+                    .headerLinksListItem {
+                        margin-right: 60px;
+
+                        @include tablet690 {
+                            margin: 0;
+                        }
+
+                        .headerLinksListItemLink {
+                            color: $gray;
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                @include tablet690 {
+                    flex-basis: 689px;
+                }
+            }
+
+            .headerNavIcon {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-basis: 78px;
+
+                .headerUpIcon {
+
+                    a {
+                        .headerUpIcons {                     
+                            height: 24px;
+                            width: 24px;
+    
+                            @include tablet690 {
+                                margin-left: 30px;
+                            }
+                        }
+
+                        .headerUpIconsNm {
+
+                            @include tablet510 {
+
+                                margin-left: 0;
+                            }
+
+                            @include phones {
+
+                            margin-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                .active {
+                            
+                    @include phones {
+                        display: none;
+                    }
+                }
+
+                @include tablet690 {
+                    justify-content: right;
+                    flex-basis: 347px;
+                }
+
+                @include tablet510 {
+                    flex-basis: 100px;
+                }
+
+                @include phones {
+                    justify-content: space-between;
+                    flex-basis: 60px;
+                }
+
+                .headerNavIconBurger {
+                    display: none;
+
+                    @include phones {
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 30px;
+                        width: 30px;
+                        padding: 4px;
+                        z-index: 10000;
+                    }
+
+                    .headerNavIconBurgerLine {
+                        height: 3px;
+                        width: 100%;
+                        background: $gray;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+
+        .headerContent {
+            display: flex;
+            justify-content: space-between;
+            height: 620px;
+
+            @include tablet690 {
+                height: 470px;
+            }
+
+            @include tablet510 {
+                height: 416px;
+            }
+
+            @include phones {
+                height: 328px;
+            }
+
+            .headerContentText {
+                display: flex;
+                align-items: center;
+                flex-basis: 445px;
+
+                @include tablet690 {
+                    flex-basis: 390px;
+                }
+
+                @include phones {
+                    flex-basis: auto;
+                    width: 100%;
+                }
+
+                .headerContentTextInside {
+                    position: relative;
+                    height: 361px;
+                    width: 100%;
+
+                    @include tablet690 {
+                        height: 340px;
+                    }
+
+                    @include tablet510 {
+                        height: 296px;
+                    }
+
+                    @include phones {
+                        height: 230px;
+                    }
+
+                    h1 {
+                        color: $gray;
+                        line-height: 60px;
+
+                        @include tablet690 {
+                            padding-right: 15px;
+                            line-height: 50px;
+                        }
+
+                        @include tablet510 {
+                            padding-right: 65px;
+                        }
+
+                        @include phones {
+                            padding: 0;
+                            width: 221px;
+                            line-height: 30px;
+                        }
+                    }
+
+                    p {
+                        margin-top: 30px;
+                        color: $dirty;
+                        line-height: 27px;
+
+                        @include tablet690 {
+                            font-size: 18px;
+                            line-height: 27px;
+                        }
+
+                        @include tablet510 {
+                            font-size: 16px;
+                            margin-top: 5px;
+                        }
+
+                        @include phones {
+                            margin-top: 15px;
+                            line-height: 21px;
+                        }
+                    }
+
+                    a {
+                        position: absolute;
+                        bottom: 0;
+                        padding: 23px 95px;
+                        border: 1px solid $bluebery;
+                        color: $bluebery;
+
+                        @include phones {
+                            padding: 15px 38px;
+                        }
+                    }
+                }
+            }
+
+            .headerContentImg {
+                position: relative;
+                overflow: hidden;
+                flex-basis: 540px;
+
+                @include tablet690 {
+                    flex-basis: 270px;
+                }
+
+                @include tablet510 {
+                    flex-basis: 195px;
+                    height: 416px;
+                }
+
+                @include phones {
+                    display: none;
+                }
+
+                img {
+                    position: absolute;
+                    top: 60px;
+                    height: auto;
+                    width: 540px;
+                    max-width: 100%;
+
+                    @include tablet690 {
+                        right: 0;
+                        height: auto;
+                        width: 270px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

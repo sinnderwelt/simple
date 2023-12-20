@@ -1,0 +1,198 @@
+.edgeOrigami {
+    height: 973px;
+    background: $background;
+
+    @include tablet690 {
+        height: 810px;
+    }
+
+    @include tablet510 {
+        height: 875px;
+    }
+
+    @include phones {
+        height: 1183px;
+    }
+
+    .mainOrigami {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 90px 0;
+
+        @include tablet690 {
+            padding: 60px 0;
+        }
+
+        .headOrigami {
+            display: flex;
+            flex-basis: 139px;
+
+            @include tablet690 {
+                flex-basis: 219px;
+            }
+
+            @include tablet510 {
+                flex-basis: 203px;
+            }
+
+            @include phones {
+                flex-direction: column;
+            }
+
+            li {
+                display: flex;
+                flex: 1;
+                height: 100%;
+                margin-right: 30px;
+                padding-top: 19px;
+                border-top: 2px #c0c0c0 solid;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                @include tablet690 {
+                    flex-direction: column;
+                }
+
+                @include phones {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 0;
+                    padding-bottom: 19px;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+
+                .headOrigamiImg {
+                    flex: 1;
+
+                    img {
+                        width: 160px;
+
+                        @include tablet510 {
+                            width: 150px;
+                        }
+
+                        @include phones {
+                            width: 130px;
+                        }
+                    }
+                }
+
+                .headOrigamiContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex: 1;
+                    margin-left: 30px;
+
+                    @include tablet690 {
+                        margin: 0;
+                    }
+
+                    h4 {
+                        color: $dirty;
+                    }
+
+                    p {
+                        padding-top: 5px;
+                        color: $dirty;
+                    }
+                }
+            }
+        }
+
+        .bodyOrigami {
+            display: flex;
+            flex: 1;
+            margin-top: 90px;
+
+            @include tablet690 {
+                margin-top: 40px;
+            }
+
+            @include tablet510 {
+                flex-direction: column;
+            }
+
+            .bodyOrigamiImg {
+                flex-basis: 730px;
+                height: 100%;
+
+                @include tablet690 {
+                    flex-basis: 330px;
+                }
+
+                @include tablet510 {
+                    flex-basis: 255px;
+                }
+
+                @include phones {
+                    flex-basis: 170px;
+                }
+
+                img {
+                    width: 100%;
+
+                    @include tablet510 {
+                        height: auto;
+                        width: 60%;
+                    }
+
+                    @include phones {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .bodyOrigamiContent {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+                height: 100%;
+                margin-left: 50px;
+
+                @include tablet690 {
+                    margin-left: 25px;
+                }
+
+                @include phones {
+                    margin: 0;
+                }
+
+                h2 {
+                    color: $otherHeader;
+                    padding-bottom: 20px;
+                }
+
+                p {
+                    color: $dirty;
+                    padding-bottom: 20px;
+                    line-height: 30px;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    @include tablet690 {
+                        padding-bottom: 10px;
+
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    @include tablet510 {
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+    }
+}

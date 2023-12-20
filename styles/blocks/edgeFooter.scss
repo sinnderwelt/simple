@@ -1,0 +1,93 @@
+.edgeFooter {
+    position: relative;
+    height: 101px;
+    background: $gray;
+
+    &::before {
+        content: 'SIMPLE ® 2021';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        background: #fff;
+        height: 21px;
+        width: 100%;
+        color: $gray;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+    }
+
+    @include phones {
+        height: 148px;
+    }
+
+    footer {
+        height: 100%;
+
+        .footerUp {
+            display: flex;
+            height: 80px;
+
+            @include phones {
+                flex-direction: column;
+                height: 127px;
+            }
+
+            .footerUpLogo {
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                @include phones {
+                    height: 62px;
+                    justify-content: center;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                #footerLogo {
+                    max-width: 140px;
+                    height: 22px;
+                }
+            }
+
+            .footerUpIcons {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                width: 100%;
+
+                @include phones {
+                    justify-content: center;
+                    height: 64px;
+                }
+
+                .footerUpInside {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-basis: 186px;
+
+                    #footerUpIcons {
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+
+        // .footerDown {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     height: 21px;
+        //     color: $gray;
+        //     background: #bcbcbc;
+
+        //     p {
+        //         font-size: 13px;
+        //         font-weight: 400;
+        //     }
+        // }
+    }
+}

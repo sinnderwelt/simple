@@ -1,0 +1,124 @@
+.edgeSketchbook {
+    overflow: hidden;
+    height: 500px;
+
+    @include tablet690 {
+        height: 394px;
+    }
+
+    @include tablet510 {
+        height: 687px;
+    }
+
+    @include phones {
+        height: 573px;
+    }
+
+    .mainSketchbook {
+        display: flex;
+        height: 272px;
+
+        @include tablet690 {
+            height: 274px;
+        }
+
+        @include tablet510 {
+            flex-direction: column-reverse;
+            height: 567px;
+        }
+
+        @include phones {
+            height: 453px;
+        }
+
+        .sketchbookContent {
+            position: relative;
+            flex-basis: 350px;
+
+            @include tablet690 {
+                flex-basis: 330px;
+            }
+
+            @include tablet510 {
+                flex-basis: 215px;
+            }
+
+            @include phones {
+                flex-basis: 232px;
+            }
+
+            .sketchbookContentHeader {
+                color: $otherHeader;
+                margin-bottom: 8px;
+
+                @include tablet690 {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .sketchbookContentText {
+                color: $dirty;
+                line-height: 30px;
+
+                @include tablet510 {
+                    line-height: 27px;
+                }
+            }
+
+            .sketchbookContentButton {
+                position: absolute;
+                bottom: 0;
+                padding: 23px 95px;
+                border: 1px solid $bluebery;
+                color: $bluebery;
+
+                @include tablet510 {
+                    padding: 18px 65px;
+                }
+
+                @include phones {
+                    padding: 14px 38px;
+                }
+            }
+
+        }
+
+        .sketchbookImg {
+            position: relative;
+            flex: 1;
+
+            @include tablet510 {
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width: 730px;
+                max-width: 100%;
+                height: auto;
+                bottom: -255px;
+                right: 0;
+                position: absolute;
+
+                @include tablet690 {
+                    width: 449px;
+                    max-width: 100%;
+                    height: auto;
+                    bottom: -75px;
+                    right: -140px;
+                }
+
+                @include tablet510 {
+                    bottom: auto;
+                    right: auto;
+                }
+
+                @include phones {
+                    width: 290px;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

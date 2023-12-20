@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1150px;
+    height: 100%;
+
+    @include tablet690 {
+        width: 90%;
+    }
+}
+
+.containerFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 400;
+
+    @include phones {
+        font-size: 18px;
+    }
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+
+    @include tablet510 {
+        font-size: 16px;
+    }
+
+    @include phones {
+        font-size: 14px;
+    }
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+
+    @include tablet690 {
+        font-size: 50px;
+    }
+
+    @include tablet510 {
+        font-size: 38px;
+    }
+
+    @include phones {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+
+    @include tablet690 {
+        font-size: 30px;
+    }
+
+    @include tablet510 {
+        font-size: 24px;
+    }
+
+
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+
+    @include tablet510 {
+        font-size: 24px;
+    }
+
+
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+
+    @include tablet510 {
+        font-size: 16px;
+    }
+}

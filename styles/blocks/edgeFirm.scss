@@ -1,0 +1,98 @@
+.edgeFirm {
+    height: 315px;
+    background: $background;
+
+    @include tablet690 {
+        height: 200px;
+    }
+
+    @include tablet510 {
+        height: 404px;
+    }
+
+    @include phones {
+        height: 530px;
+    }
+
+    .mainFirm {
+        display: flex;
+        justify-content: space-between;
+        height: 135px;
+
+        @include tablet690 {
+            height: 80px;
+        }
+
+        @include tablet510 {
+            align-content: space-between;
+            flex-wrap: wrap;
+            height: 284px;
+        }
+
+        @include phones {
+            height: 410px;
+        }
+
+        .firmItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc((100% - 90px) / 4);
+            border: 1px solid #c4c4c4;
+
+            @include tablet510 {
+                width: calc((100% - 30px) / 2);
+                height: 127px;
+            }
+
+            @include phones {
+                width: 100%;
+                height: 80px;
+            }
+
+            .firmItemImgHahnemuhle {
+
+                @include tablet690 {
+                    height: 33px;
+                }
+
+                @include tablet510 {
+                    height: 51px;
+                }
+            }
+
+            .firmItemImgCanson {
+
+                @include tablet690 {
+                    height: 31px;
+                }
+
+                @include tablet510 {
+                    height: 50px;
+                }
+            }
+
+            .firmItemImgRoyal {
+
+                @include tablet690 {
+                    height: 12px;
+                }
+
+                @include tablet510 {
+                    height: 20px;
+                }
+            }
+
+            .firmItemImgFabriano {
+
+                @include tablet690 {
+                    height: 15px;
+                }
+
+                @include tablet510 {
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
